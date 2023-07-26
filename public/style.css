@@ -9,6 +9,127 @@ html {
   /* me permite deslizar cuando hago click en los links del menu*/
   scroll-behavior: smooth;
 }
+body {
+  padding: 0px;
+  margin: 0px;
+  background: #191a1d;
+  width: 100vw;
+}
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML Nav Styles */
+/* HTML Nav Styles */
+/* HTML Nav Styles */
+nav menuitem {
+  position: relative;
+  display: block;
+  opacity: 1;
+  cursor: pointer;
+}
+
+nav menuitem > menu {
+  position: absolute;
+  pointer-events: none;
+}
+nav > menu {
+  display: flex;
+}
+
+nav > menu > menuitem {
+  pointer-events: all;
+  opacity: 1;
+}
+menu menuitem a {
+  white-space: nowrap;
+  display: block;
+}
+
+menuitem:hover > menu {
+  pointer-events: initial;
+}
+menuitem:hover > menu > menuitem,
+menu:hover > menuitem {
+  opacity: 1;
+}
+nav > menu > menuitem menuitem menu {
+  transform: translateX(100%);
+  top: 0;
+  right: 0;
+}
+/* User Styles Below Not Required */
+/* User Styles Below Not Required */
+/* User Styles Below Not Required */
+
+nav {
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+nav a {
+  background: #1c8698;
+  color: #fff;
+  min-width: 12px;
+  margin: 0px 6px 6px 0px;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  border-radius: 1px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+nav a:hover:before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  width: 10%;
+  height: 10%;
+}
+
+nav > menu > menuitem > a + menu:after {
+  content: "";
+  position: absolute;
+  border: 10px solid transparent;
+  border-top: 10px solid white;
+  left: 5px;
+  top: -32px;
+}
+nav menuitem > menu > menuitem > a + menu:after {
+  content: "";
+  position: absolute;
+  border: 10px solid transparent;
+  border-left: 15px solid white;
+  top: 10px;
+  left: -150px;
+  transition: opacity 0.6, transform 0s;
+}
+
+nav > menu > menuitem > menu > menuitem {
+  transition: transform 0.6s, opacity 0.6s;
+  transform: translateY(150%);
+  opacity: 0;
+}
+nav > menu > menuitem:hover > menu > menuitem,
+nav > menu > menuitem.hover > menu > menuitem {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+menuitem > menu > menuitem > menu > menuitem {
+  transition: transform 0.6s, opacity 0.6s;
+  transform: translateX(195px) translateY(0%);
+  opacity: 0;
+}
+menuitem > menu > menuitem:hover > menu > menuitem,
+menuitem > menu > menuitem.hover > menu > menuitem {
+  transform: translateX(0) translateY(0%);
+  opacity: 1;
+}
+
 /* MENU */
 .contenedor-header {
   background: #1e2326;
@@ -19,42 +140,19 @@ html {
   z-index: 99;
 }
 .contenedor-header header {
-  max-width: 1100px;
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 5px 20px;
+  align-items: flex-start;
+  padding: 15px 20px;
 }
-.contenedor-header header .logo * {
+.contenedor-header header .logo a {
   font-family: "Righteous";
   font-size: 36px;
   color: aqua;
   text-decoration: none;
 }
-.contenedor-header header ul {
-  display: flex;
-  list-style: none;
-}
-.contenedor-header header nav ul li a {
-  text-align: none;
-  color: #fff;
-  margin: 0.15px;
-  padding: 3px;
-  transition: 0.5s;
-  text-decoration: none;
-}
-.contenedor-header header nav ul li a:hover {
-  color: #1c8698;
-}
-.nav-responsive {
-  background-color: #1c8698;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  display: none;
-}
+
 /* SECCION INICIO */
 .inicio {
   background: linear-gradient(to top, rgba(30, 35, 38, 8), rgba(30, 35, 38, 1)),
@@ -83,6 +181,7 @@ html {
 .inicio .contenido-banner h1 {
   margin-top: 10px;
   font-size: 35px;
+  color: #1c8698;
   font-family: "Righteous";
 }
 .inicio .contenido-banner h2 {
@@ -101,6 +200,12 @@ html {
   margin: 40px 5px;
   font-size: 20px;
   transition: 0.3s;
+}
+.inicio .redes :hover {
+  background-color: #1c8698;
+  box-shadow: 0px 15px 20px rgba(59, 217, 217, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 .sobremi {
@@ -130,6 +235,7 @@ html {
 .sobremi .fila {
   display: flex;
 }
+
 .sobremi .fila .col {
   width: 50%;
 }
@@ -157,7 +263,9 @@ html {
 }
 .sobremi .fila .col .contenedor-intereses {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .sobremi .fila .col .contenedor-intereses .interes {
@@ -167,13 +275,17 @@ html {
   border-radius: 10px;
   margin: 0 15px 15px 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   transition: 0.3s;
 }
 .sobremi .fila .col .contenedor-intereses .interes:hover {
+  /* background-color: #1c8698; */
   background-color: #1c8698;
+  box-shadow: 0px 15px 20px rgba(59, 217, 217, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 .sobremi .fila .col .contenedor-intereses .interes i {
   font-size: 30px;
@@ -462,31 +574,41 @@ html {
   position: relative;
   bottom: 4px;
 }
-.curriculum button {
+button {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 600;
+  color: #000000;
+  background: #ffffff;
+  border: 1px;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
   cursor: pointer;
-  background-color: transparent;
-  border: 2px solid #fff;
-  width: fit-content;
+  position: relative;
   display: block;
   margin: 20px auto;
   padding: 10px 22px;
-  font-size: 16px;
-  color: #fff;
-  position: relative;
-  z-index: 10;
 }
-.curriculum button .overlay {
-  position: absolute;
+button active {
+  /* position: absolute;
   top: 0;
   left: 0;
   width: 0%;
   height: 100%;
   background-color: #1c8698;
   z-index: -1;
-  transition: 1s;
+  transition: 1s; */
+  transform: translateY(-1px);
+  /* position: absolute; */
 }
-.curriculum button:hover .overlay {
-  width: 100%;
+button:hover {
+  /* width: 22%; */
+  background-color: #1c8698;
+  box-shadow: 0px 15px 20px rgba(59, 217, 217, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 /* SECCION PORTFOLIO*/
 .portfolio {
@@ -494,7 +616,7 @@ html {
   color: #fff;
   padding: 50px 20px;
 }
-portfolio .contenido-seccion {
+.portfolio .contenido-seccion {
   max-width: 1100px;
   margin: auto;
 }
@@ -654,6 +776,12 @@ footer .redes a {
   font-size: 20px;
   transition: 0.3s;
 }
+footer .redes :hover {
+  background-color: #1c8698;
+  box-shadow: 0px 15px 20px rgba(59, 217, 217, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
 footer .arriba {
   display: block;
   width: 50px;
@@ -668,8 +796,9 @@ footer .arriba {
   line-height: 50px;
   font-size: 18px;
 }
-/*SECCION RESPONSIVE*/
-/* @media screen and (max-width: 980px) {
+
+/* SECCION RESPONSIVE*/
+/* @media screen and (max-width: 700px) {
   nav {
     display: none;
   }

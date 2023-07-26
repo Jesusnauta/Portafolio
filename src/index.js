@@ -1,19 +1,17 @@
 // let menuVisible = false;
 
-// function mostrarOcultarMenu() {
-//   const navElement = document.getElementById("nav");
+// function mostrar() {
 //   if (menuVisible) {
-//     navElement.classList.remove("responsive");
+//     document.getElementById("nav").classList = "";
 //     menuVisible = false;
 //   } else {
-//     navElement.classList.add("responsive");
+//     document.getElementById("nav").classList = "responsive";
 //     menuVisible = true;
 //   }
 // }
 
 // function seleccionar() {
-//   const navElement = document.getElementById("nav");
-//   navElement.classList.remove("responsive");
+//   document.getElementById("nav").classList = "";
 //   menuVisible = false;
 // }
 
