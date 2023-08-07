@@ -1,20 +1,3 @@
-// let menuVisible = false;
-
-// function mostrar() {
-//   if (menuVisible) {
-//     document.getElementById("nav").classList = "";
-//     menuVisible = false;
-//   } else {
-//     document.getElementById("nav").classList = "responsive";
-//     menuVisible = true;
-//   }
-// }
-
-// function seleccionar() {
-//   document.getElementById("nav").classList = "";
-//   menuVisible = false;
-// }
-
 function efectoHabilidades() {
   const skills = document.getElementById("skills");
   const distancia_skills =
