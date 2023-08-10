@@ -626,7 +626,7 @@ button:hover {
   position: relative;
   max-width: 340px;
   height: fit-content;
-  margin: 10px;
+  margin: 15px;
   cursor: pointer;
 }
 .portfolio .galeria .proyecto img {
@@ -683,11 +683,10 @@ button:hover {
   position: relative;
   max-width: 340px;
   height: fit-content;
-  margin: 10px;
+  margin: 15px;
   cursor: pointer;
 }
 .certificados .qlq .certificado img {
-  width: 100%;
   display: block;
 }
 .certificados .qlq .certificado .overlay {
