@@ -1,23 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap");
 * {
+  padding: 0;
   box-sizing: border-box;
   font-family: "Work Sans";
   margin: 0;
-  padding: 0;
 }
-html {
+.menor {
+  font-size: 2000px;
+}
+.tu {
   /* me permite deslizar cuando hago click en los links del menu*/
   scroll-behavior: smooth;
 }
-body {
-  padding: 0px;
+.yo {
+  padding: 10px;
   margin: 0px;
   background: #191a1d;
   width: 100vw;
 }
-body * {
+.yo * {
   margin: 0;
-  padding: 0;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+.text {
+  fill: none;
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+}
+
+.text:nth-child(5n + 1) {
+  stroke: #f2385a;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+  stroke: #f5a503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+  stroke: #e9f1df;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+  stroke: #56d9cd;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+  stroke: #3aa1bf;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+/* Other styles */
+.tu,
+.yo {
+  height: 100%;
+}
+
+.yo {
+  background: #212121;
+  background-size: 0em 100%;
 }
 nav menuitem {
   position: relative;
@@ -136,7 +201,7 @@ menuitem > menu > menuitem.hover > menu > menuitem {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 15px 20px;
+  padding: 10px 10px;
 }
 .contenedor-header header .logo a {
   font-family: "Righteous";
@@ -156,7 +221,7 @@ menuitem > menu > menuitem.hover > menu > menuitem {
   align-items: center;
 }
 .inicio .contenido-banner {
-  padding-top: 80px;
+  padding-top: 70px;
   background-color: #1e2326;
   max-width: 350px;
   margin: auto;
@@ -170,18 +235,19 @@ menuitem > menu > menuitem.hover > menu > menuitem {
   margin: auto;
   border-radius: 100%;
 }
+
 .inicio .contenido-banner h1 {
-  margin-top: 10px;
-  font-size: 35px;
-  color: #1c8698;
-  font-family: "Righteous";
+  font-size: 30px;
 }
 .inicio .contenido-banner h2 {
   font-size: 15px;
   font-weight: normal;
+  padding-top: -100px;
 }
 .inicio .contenido-banner .redes a {
   color: #fff;
+  padding-top: -100px;
+
   display: inline-block;
   text-decoration: none;
   border: 1px solid #fff;
