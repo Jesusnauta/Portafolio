@@ -240,7 +240,9 @@ menuitem > menu > menuitem.hover > menu > menuitem {
   font-size: 30px;
 }
 .inicio .contenido-banner h2 {
-  font-size: 15px;
+  font-size: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #1c8698;
   font-weight: normal;
   padding-top: -100px;
 }
@@ -648,6 +650,7 @@ button {
   margin: 20px auto;
   padding: 10px 22px;
 }
+
 button active {
   /* position: absolute;
   top: 0;
